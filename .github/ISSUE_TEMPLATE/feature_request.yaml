@@ -1,0 +1,91 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for Gitea
+title: "[FEAT] "
+labels: ["type/feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature!
+        Please fill out this form as completely as possible.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please check the following before submitting a feature request.
+      options:
+        - label: I agree to follow this project's [Code of Conduct](https://github.com/go-gitea/gitea/blob/main/CODE_OF_CONDUCT.md)
+          required: true
+        - label: I have searched the [existing issues](https://github.com/go-gitea/gitea/issues) and this feature has not been requested before
+          required: true
+        - label: I have checked the [roadmap](https://github.com/go-gitea/gitea/milestones) and this feature is not already planned
+          required: false
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: A clear and concise description of the feature you would like to see.
+      placeholder: Describe the feature you want...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a problem? Please describe.
+      placeholder: I'm always frustrated when...
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see implemented.
+      placeholder: I would like to see...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or features you've considered.
+      placeholder: I also considered...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Feature Area
+      description: Which area of Gitea does this feature relate to?
+      options:
+        - Repository Management
+        - User/Organization Management
+        - Authentication & Authorization
+        - Pull Requests & Code Review
+        - Issues & Project Management
+        - CI/CD & Actions
+        - API
+        - Admin Panel
+        - Notifications
+        - Search
+        - Webhooks & Integrations
+        - Performance
+        - UI/UX
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or mockups about the feature request here.
+    validations:
+      required: false
