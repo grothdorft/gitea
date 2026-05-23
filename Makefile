@@ -57,6 +57,11 @@ test-cover:
 	$(GO) tool cover -html=coverage.out -o coverage.html
 	@echo "Coverage report: coverage.html"
 
+## test-short: Run only short tests (useful for quick feedback during development)
+test-short:
+	@echo "Running short tests..."
+	$(GO) test ./... -short -count=1 -timeout 60s
+
 ## lint: Run golangci-lint
 lint:
 	@echo "Running linter..."
