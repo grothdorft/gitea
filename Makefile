@@ -41,6 +41,7 @@ build-race:
 clean:
 	@echo "Cleaning..."
 	@rm -rf $(BUILD_DIR)
+	@rm -f coverage.out coverage.html
 	@$(GO) clean ./...
 	@echo "Clean complete"
 
