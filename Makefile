@@ -89,9 +89,10 @@ generate:
 	$(GO) generate ./...
 
 ## run: Build and run the application
+# Note: using port 3001 locally to avoid conflicts with other services on 3000
 run: build
 	@echo "Starting $(BINARY_NAME)..."
-	$(BUILD_DIR)/$(BINARY_NAME) web
+	$(BUILD_DIR)/$(BINARY_NAME) web --port 3001
 
 ## dev: Run with air for live reload
 dev:
